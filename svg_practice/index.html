@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        overflow: visible;
+      }
+
+      .svg-container {
+        display: grid;
+        place-items: center;
+        width: 90%;
+        height: 90%;
+      }
+      .overlay {
+        position: absolute;
+        z-index: -1;
+        border: 2px solid black;
+      }
+      .circle {
+        overflow: visible;
+      }
+      spline-viewer {
+        border: 2px solid black;
+        position: absolute;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+    ></script>
+    <spline-viewer
+      url="https://prod.spline.design/PBQQBw8bfXDhBo7w/scene.splinecode"
+      events-target="global"
+    ></spline-viewer>
+    <section class="svg-container">
+      <svg
+        class="overlay"
+        width="514"
+        height="237"
+        viewBox="0 0 514 237"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_d_8_27)">
+          <path
+            d="M108 56L91 82.5L70 71.5L64 58.5L70 36L91 29L119.5 20.5V2M119.5 2L135 71.5V115L119.5 166L101 193L78.5 219.5L50 228L19 219.5L5 193V166V147.5L27.5 136.5L43 133.5L64 136.5L70 142L75.5 159V166L64 174.5H50L36 156M119.5 2L146 29L169 71.5V94V133.5L154.5 219.5L202.5 94L224 44.5L258 20.5H293L355.5 36L417.5 44.5L464 36L509.5 2"
+            stroke="black"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_8_27"
+            x="0.5"
+            y="0.776855"
+            width="513.299"
+            height="235.743"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="2" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_8_27"
+            />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_8_27"
+              result="shape"
+            />
+          </filter>
+        </defs>
+      </svg>
+
+      <svg
+        class="circle"
+        width="514"
+        height="237"
+        viewBox="0 0 514 237"
+        fill="red"
+      >
+        <g>
+          <circle cx="0" cy="0" r="8" fill="blue"></circle>
+          <animateMotion
+            path=" M108 56L91 82.5L70 71.5L64 58.5L70 36L91 29L119.5 20.5V2M119.5 2L135 71.5V115L119.5 166L101 193L78.5 219.5L50 228L19 219.5L5 193V166V147.5L27.5 136.5L43 133.5L64 136.5L70 142L75.5 159V166L64 174.5H50L36 156M119.5 2L146 29L169 71.5V94V133.5L154.5 219.5L202.5 94L224 44.5L258 20.5H293L355.5 36L417.5 44.5L464 36L509.5 2"
+            dur="20s"
+            begin="0s"
+            repeatCount="indefinite"
+          />
+        </g>
+      </svg>
+    </section>
+  </body>
+</html>
+
+<animateMotion path="M 0 0 V 0 H 100 Z" dur="2s" repeatCount="indefinite" />

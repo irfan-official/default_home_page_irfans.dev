@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+}
+
+section .right_side svg {
+  position: relative;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+}
+
+#earth {
+  transform-box: fill-box;
+  transform-origin: initial;
+  animation: earth 3s linear infinite;
+  animation-direction: alternate;
+}
+#surface {
+  animation: earth_surface 60s linear infinite;
+  transform-box: fill-box;
+  transform-origin: initial;
+  /* animation-direction: alternate; */
+}
+#moon_surface {
+  animation: moon_surface 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: initial;
+}
+#grass {
+  fill: green;
+  animation: grass_move 1s linear infinite;
+  transform-box: fill-box;
+  transform-origin: initial;
+  animation-direction: alternate;
+}
+@keyframes grass_move {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(6deg);
+  }
+}
+@keyframes earth {
+  0% {
+    transform: translate(0, 0);
+    scale: 1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1.02) rotate(5deg);
+  }
+}
+@keyframes earth_surface {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+@keyframes moon_surface {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+@keyframes stars {
+  0% {
+    transform: translate(0, 0);
+
+    scale: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    scale: 3;
+  }
+}
+
+.star_1,
+.star_2,
+.star_3,
+.star_4,
+.star_5,
+.star_6,
+.star_7,
+.star_8,
+.star_9,
+.star_10,
+.star_11,
+.star_12 {
+  animation: stars linear infinite;
+  animation-direction: alternate;
+  transform-box: fill-box;
+  transform-origin: initial;
+}
+.star_1 {
+  animation-duration: 1s;
+}
+.star_2 {
+  animation-duration: 3s;
+}
+.star_3 {
+  animation-duration: 5s;
+}
+.star_4 {
+  animation-duration: 2s;
+}
+.star_5 {
+  animation-duration: 6s;
+}
+.star_6 {
+  animation-duration: 2s;
+}
+.star_7 {
+  animation-duration: 4s;
+}
+.star_8 {
+  animation-duration: 2s;
+}
+.star_9 {
+  animation-duration: 2s;
+}
+.star_10 {
+  animation-duration: 4s;
+}
+.star_11 {
+  animation-duration: 3s;
+}
+.star_12 {
+  animation-duration: 5s;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+}
